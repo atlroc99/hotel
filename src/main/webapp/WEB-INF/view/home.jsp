@@ -6,12 +6,34 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
 /* var jsonResponse = {json:JSON.stingify(contents)}; */
+
 $.ajax({
-		type:'GET',
-		url: "/hotels/allHotels",
-		data: jsonfile,
-		dataType: "json"
+	type: 'GET',
+	url:'http://localhost:9000/hotels/allHotels',
+	success: function(hotels){
+		//hotels = JSON.parse(hotels);
+		
+	$.each(hotels, function(i, hotel){
+		var logText = 
+			"ID: " + hotel.id + "\n" +
+			"Name: " + hotel.name +"\n"+
+			"Price: " + hotel.pricePerNight + "\n" + 
+			"Address: \n" +
+			"	City: " + hotel.address.city + "\n" +
+			"	Country" + hotel.address.country + "\n" +
+			"Reviews: " + "\n" + 
+			 $.each(hotel.list, function(i, review){
+				 "Guest: " + review.name + "\n" + 
+				 "Rating: " + review.rating + "\n" + 
+				 "Approved: " + review.approved+ "\n"
+			 });
+		
+		console.log(logText);
+		});
+	}
 });
+
+
 
 </script>
 </head>
