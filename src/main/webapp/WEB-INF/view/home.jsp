@@ -33,7 +33,8 @@ $.ajax({
 	}
 });
 
-//create a new method to print the reviews only
+//create a new method to print the reviews only 
+//another test
 
 </script>
 </head>
