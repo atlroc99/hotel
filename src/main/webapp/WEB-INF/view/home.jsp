@@ -1,48 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script>
-/* var jsonResponse = {json:JSON.stingify(contents)}; */
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
 
-$.ajax({
-	type: 'GET',
-	url:'http://localhost:9000/hotels/allHotels',
-	success: function(hotels){
-		//hotels = JSON.parse(hotels);
-		
-	$.each(hotels, function(i, hotel){
-		var logText = 
-			"ID: " + hotel.id + "\n" +
-			"Name: " + hotel.name +"\n"+
-			"Price: " + hotel.pricePerNight + "\n" + 
-			"Address: \n" +
-			"	City: " + hotel.address.city + "\n" +
-			"	Country" + hotel.address.country + "\n" +
-			"Reviews: " + "\n" + 
-			 $.each(hotel.list, function(i, review){
-				 "Guest: " + review.name + "\n" + 
-				 "Rating: " + review.rating + "\n" + 
-				 "Approved: " + review.approved+ "\n"
-			 });
-		
-		console.log(logText);
-		});
-	}
-});
-
-//create a new method to print the reviews only 
-//another test
-
-</script>
+<!-- Bootstrap -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" 
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/css/bootstrap.min.css">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 </head>
+
 <body>
+	<div class="container">
+		<div class="table-responsive>"></div>
+		<table class="table table-inverse" id="info_table">
+			<tr class="bg-success">
+				<th >Name</th>
+				<th>Gender</th>
+				<th>Eye color</th>
+				<th>Tags</th>
+				<th>Friends</th>
+			</tr>
+		</table>
+	</div>
 
-<h2>Hotels com -> landing page for the hotels</h2>
-<div id="div1"></div>
 
-<button>Click to get Data</button>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/home.js"></script>
 </body>
+
 </html>
