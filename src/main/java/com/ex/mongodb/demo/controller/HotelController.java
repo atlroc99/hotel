@@ -32,7 +32,7 @@ public class HotelController {
 		return this.hotelRepository.findAll();
 	}
 	
-	@PutMapping
+	@PutMapping("/newHotel")
 	public void addHotel(@RequestBody Hotel hotel)
 	{
 		this.hotelRepository.insert(hotel);
