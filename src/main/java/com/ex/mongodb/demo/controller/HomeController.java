@@ -10,18 +10,25 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class HomeController {
 	
 	
-	@RequestMapping("/home")
+/*	@RequestMapping("/home")
 	public String landingPage(Model model)
 	{
 		model.addAttribute("message", "this is home page");
 		return "home";
 	}
+	*/
 	
-	@GetMapping("/test")
-	public String printReview()
+	
+	@GetMapping("/homepage")
+	public String getHomePage()
 	{
-		return "test";
+		return "homePage";
 	}
 	
 	
+	@GetMapping("/addHotelForm")
+	public String getHotelForm()
+	{
+		return "addHotel";
+	}
 }
