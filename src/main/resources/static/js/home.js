@@ -1,6 +1,18 @@
 /**
- * 
+ *
  */
+
+ function _homePage() {
+	 $.ajax({
+		 type:'GET',
+		 url:'http://localhost:9000/homepage',
+		 success:function(){
+			 success;
+		 }
+	 });
+ }
+ 
+ 
 var jsonFile = "js/info.json";
 
 $(document).ready(function() {
@@ -13,9 +25,9 @@ $(document).ready(function() {
 			employee += '<td>' + value.name + '</td>';
 			employee += '<td>' + value.gender + '</td>';
 			employee += '<td>' + value.eyeColor + '</td>';
-			
+
 			tags = value.tags;
-			employee += '<td>'+tags +'</td>'; 
+			employee += '<td>'+tags +'</td>';
 
 			var f = '';
 			$.each(value.friends, function(k, friend){
@@ -23,9 +35,9 @@ $(document).ready(function() {
 				f += ', ';
 				console.log(friend.name);
 			});
-			
+
 			employee += '<td>'+ f +'</td>'
-		
+
 			employee += '</tr>';
 		});
 		// console.log(employee);

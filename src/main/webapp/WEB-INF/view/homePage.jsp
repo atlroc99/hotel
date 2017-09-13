@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html lang="en">
 
 <head>
@@ -34,10 +35,10 @@
 <table class="table-responsive">
 	<tr>
 		<td>
-			<a href="homePage.html" onclick="homePage()">Hotels</a>
+			<a href="<c:url value="/homepage"/>">Hotels</a>
 		</td>
 			<td>
-				<a href="addHotel.html">Add a hotel</a>
+				<a href="<c:url value="/addHotelForm"/>">Add a hotel</a>
 			</td>
 			<td>
 				<a href="#">find by price</a>
@@ -66,7 +67,7 @@
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/hotelHome.js"></script>
+	 <script type="text/javascript" src="js/hotelHome.js"></script>
 </body>
 
 </html>

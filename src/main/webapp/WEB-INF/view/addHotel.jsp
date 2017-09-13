@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 
 <head>
@@ -17,10 +18,10 @@
     <table class="table-responsive">
     	<tr>
     		<td>
-    			<a href="test.jsp">Hotels</a>
+    			<a href="<c:url value="/homepage"/>">Hotels</a>
     		</td>
     			<td>
-    				<a href="addHotel.jsp">Add a hotel</a>
+    				<a href="<c:url value="/addHotelForm"/>">Add a hotel</a>
     			</td>
     			<td>
     				<a href="#">find by price</a>
@@ -30,38 +31,40 @@
     			</td>
     	</tr>
     </table>
-
+<form action="<c:url value="/allHotels"/>" method="post" id="newHotelForm">
     <div class="form-group row">
-      <label for="hotelName" class="col-2 col-form-label">Text</label>
+      <label for="hotelName" class="col-2 col-form-label">Hotel:</label>
       <div class="col-10">
         <input type="text" id="hotelName">
       </div>
     </div>
     <div class="form-group row">
-      <label for="price" class="col-2 col-form-label">Price</label>
+      <label for="price" class="col-2 col-form-label">Price:</label>
       <div class="col-10">
         <input type="number" id="pricePerNight">
       </div>
     </div>
     <div class="form-group row">
-      <label for="city" class="col-2 col-form-label">City</label>
+      <label for="city" class="col-2 col-form-label">City:</label>
       <div class="col-10">
         <input type="text" id="city" />
       </div>
     </div>
     <div class="form-group row">
-      <label for="country" class="col-2 col-form-label">Country</label>
+      <label for="country" class="col-2 col-form-label">Country:</label>
       <div class="col-10">
         <input type="text" id="country" />
       </div>
     </div>
-    <input class="btn btn-primary" type="button" name="submitBtn" value="Sumbit" onclick="addHotel()">
+    <input type="button" class="btn btn-primary" onclick="addHotel()" value="Add"/>
+    
+    <!-- <button class= "btn btn-primary" id="addBtn">Add hotel</button> -->
     </form>
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/addHotel.js"></script>
 </body>
-
 </html>
