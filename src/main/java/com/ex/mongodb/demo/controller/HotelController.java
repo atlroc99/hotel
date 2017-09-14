@@ -1,7 +1,10 @@
 package com.ex.mongodb.demo.controller;
 
 
+import java.io.IOException;
 import java.util.List;
+
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -36,9 +39,13 @@ public class HotelController {
 	
 	//@PostMapping("/newHotel")
 	@RequestMapping(value="/newHotel", method=RequestMethod.POST)
-	public void addHotel(@RequestBody Hotel hotel)
+	public void addHotel(@RequestBody Hotel hotel, HttpServletResponse response) throws IOException
 	{
-		this.hotelRepository.insert(hotel);
+		if(hotel!=null)
+		{
+			this.hotelRepository.insert(hotel);
+		}
+		//response.sendRedirect("redirect:/homepage");
 	}
 	
 	@PutMapping("/update")
