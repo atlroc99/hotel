@@ -12,7 +12,7 @@ import com.ex.mongodb.demo.domain.Hotel;
 @Repository
 public interface HotelRepository extends MongoRepository<Hotel, String>, QueryDslPredicateExecutor<Hotel>{
 	
-	Hotel findById(String id);
+	Hotel findById(String id);	
 	
 	List<Hotel> findByName(String name);	
 

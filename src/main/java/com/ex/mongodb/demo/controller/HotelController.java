@@ -37,7 +37,6 @@ public class HotelController {
 		return this.hotelRepository.findAll();
 	}
 	
-	//@PostMapping("/newHotel")
 	@RequestMapping(value="/newHotel", method=RequestMethod.POST)
 	public void addHotel(@RequestBody Hotel hotel, HttpServletResponse response) throws IOException
 	{

@@ -1,0 +1,77 @@
+db.player.insert([
+{
+	"firstName":"mark",
+	"lastName":"wagh",
+	"gender":"m",
+	"age":18
+},
+{
+	"firstName":"Steve",
+	"lastName":"wagh",
+	"gender":"m",
+	"age":20
+},{
+	"firstName":"Ricky",
+	"lastName":"Ponting",
+	"gender":"m",
+	"age":22
+},{
+	"firstName":"Julian",
+	"lastName":"Anderson",
+	"gender":"m",
+	"age":28
+},{
+	"firstName":"Mathew",
+	"lastName":"Hayden",
+	"gender":"m",
+	"age":25
+},{
+	"firstName":"Shane",
+	"lastName":"Warne",
+	"gender":"m",
+	"age":25
+},{
+	"firstName":"Glen",
+	"lastName":"Mcgrawth",
+	"gender":"m",
+	"age":27
+},
+{
+	"firstName":"Adam",
+	"lastName":"Gillchrist",
+	"gender":"m",
+	"age":22
+},
+{
+	"firstName":"Bret",
+	"lastName":"Lee",
+	"gender":"m",
+	"age":28
+},{
+	"firstName":"David",
+	"lastName":"Warnner",
+	"gender":"m",
+	"age":32
+},{
+	"firstName":"Json",
+	"lastName":"Gellispe",
+	"gender":"m",
+	"age":30
+},{
+	"firstName":"Wasim",
+	"lastName":"Akram",
+	"gender":"m",
+	"age":26
+},{
+	"firstName":"Waqar",
+	"lastName":"Younus",
+	"gender":"m",
+	"age":24
+},{
+	"firstName":"Shoaib",
+	"lastName":"Aktar",
+	"gender":"m",
+	"age":29
+}
+]
+)

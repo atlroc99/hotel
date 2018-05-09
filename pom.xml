@@ -4,9 +4,8 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.ex.mongodb</groupId>
-	<artifactId>demo</artifactId>
+	<artifactId>hotel_demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
 
 	<name>demo</name>
 	<description>Demo project for Spring Boot</description>
@@ -143,4 +142,5 @@
 			</dependencies>
 		</profile>
 	</profiles>
+	<packaging>jar</packaging>
 </project>
